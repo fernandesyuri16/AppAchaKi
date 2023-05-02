@@ -57,7 +57,7 @@ const ChurrascoApp = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 100,
-    backgroundColor: 'white',
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
