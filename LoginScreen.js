@@ -94,7 +94,7 @@ export default class App extends Component {
 					]}>
           <Text style={styles.text}>Entre em sua Conta!</Text>
 					<TextInput
-						placeholderTextColor="#282828"
+						placeholderTextColor="#3337"
 						style={styles.input}
 						placeholder="Email"
 						autoCorrect={false}
