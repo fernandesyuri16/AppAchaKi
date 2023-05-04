@@ -1,16 +1,16 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import LogoScreen from './LoginScreen';
+import React, {Component} from 'react';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation'
 
-const Stack = createStackNavigator();
+import LoginScreen from './LoginScreen';
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={LoginScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+const App = createStackNavigator({
+  LoginScreen,
+},
+{
+  defaultNavigationOptions: {
+      headerShow: false,
+  }
+});
+
+export default createAppContainer (App);
