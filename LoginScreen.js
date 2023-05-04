@@ -9,25 +9,29 @@ import {
 	TextInput,
 	TouchableOpacity,
 	View,
+	ImageBackground,
 } from 'react-native'
 import React, {Component} from 'react'
+
 const initialState = {
 	offset: new Animated.ValueXY({x: 0, y: 95}),
 	opacity: new Animated.Value(0),
 	logo: new Animated.ValueXY({x: 1, y: 1}),
 }
-export default class App extends Component {
+
+export default class LoginScreen extends Component {
+
 	state = {...initialState}
 	keyboardDidShow = () => {
 		Animated.parallel([
 			Animated.timing(this.state.logo.x, {
 				toValue: 0.7,
-				duration: 100,
+				duration: 80,
 				useNativeDriver: true,
 			}).start(),
 			Animated.timing(this.state.logo.y, {
 				toValue: 0.7,
-				duration: 100,
+				duration: 80,
 				useNativeDriver: true,
 			}).start(),
 		])
@@ -36,12 +40,12 @@ export default class App extends Component {
 		Animated.parallel([
 			Animated.timing(this.state.logo.x, {
 				toValue: 1,
-				duration: 200,
+				duration: 80,
 				useNativeDriver: true,
 			}).start(),
 			Animated.timing(this.state.logo.y, {
 				toValue: 1,
-				duration: 100,
+				duration: 80,
 				useNativeDriver: true,
 			}).start(),
 		])
@@ -69,51 +73,56 @@ export default class App extends Component {
 			<KeyboardAvoidingView
 				style={styles.background}
 				behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-				<View style={styles.logocontainer}>
-					<Animated.Image
-						style={ {
-							transform: [
-								{scaleX: this.state.logo.x},
-								{scaleY: this.state.logo.y},
-							],
-						}}
-						source={require('./assets/logoLog.png')}
-					/>
-				</View>
-				<Animated.View
-					style={[
-						styles.container,
-						{
-							opacity: this.state.opacity,
-							transform: [
-								{
-									translateY: this.state.offset.y,
-								},
-							],
-						},
-					]}>
-          <Text style={styles.text}>Entre em sua Conta!</Text>
-					<TextInput
-						placeholderTextColor="#3337"
-						style={styles.input}
-						placeholder="Email"
-						autoCorrect={false}
-						onChangeText={() => {}}
-					/>
-					<TextInput
-						placeholderTextColor="#3337"
-						style={styles.input}
-						placeholder="Senha"
-						autoCorrect={false}
-						onChangeText={() => {}}
-					/>
-					<TouchableOpacity style={styles.submitbutton}>
-						<Text style={styles.submittext}>Acessar</Text>
-					</TouchableOpacity>
-					<TouchableOpacity>
-						<Text style={styles.registertext}>Criar conta gratuita</Text>
-					</TouchableOpacity>
-				</Animated.View>
+				<ImageBackground source={require('./assets/Fundo.jpg')}
+    			style={styles.backgroundImage}>
+					<View style={styles.logocontainer}>
+						<Animated.Image
+							style={ {
+								height: 150,
+								width: 160,
+								transform: [
+									{scaleX: this.state.logo.x},
+									{scaleY: this.state.logo.y},
+								],
+							}}
+							source={require('./assets/logoGG.png')}
+						/>
+					</View>
+					<Animated.View
+						style={[
+							styles.container,
+							{
+								opacity: this.state.opacity,
+								transform: [
+									{
+										translateY: this.state.offset.y,
+									},
+								],
+							},
+						]}>
+						<Text style={styles.text}>Entre em sua Conta!</Text>
+						<TextInput
+							placeholderTextColor="#3337"
+							style={styles.input}
+							placeholder="Usuário ou E-mail"
+							autoCorrect={false}
+							onChangeText={() => {}}
+						/>
+						<TextInput
+							placeholderTextColor="#3337"
+							style={styles.input}
+							placeholder="Senha"
+							autoCorrect={false}
+							onChangeText={() => {}}
+						/>
+						<TouchableOpacity style={styles.submitbutton}>
+							<Text style={styles.submittext}>Confirmar</Text>
+						</TouchableOpacity>
+						<TouchableOpacity>
+							<Text style={styles.registertext}>Criar conta gratuita</Text>
+						</TouchableOpacity>
+					</Animated.View>
+				</ImageBackground>
 			</KeyboardAvoidingView>
 		)
 	}
@@ -125,36 +134,37 @@ const styles = StyleSheet.create({
 		alignContent: 'center',
 		justifyContent: 'center',
 		backgroundColor: '#333',
+		backgroundImage: 'url(${backgroundImg})',
 	},
 	logocontainer: {
 		flex: 1,
-    width: 100,
-    heigth: 100,
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
-
 	container: {
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingBottom: 50,
+		paddingBottom: 70,
 	},
 	input: {
 		backgroundColor: '#FFF',
 		width: '90%',
-		marginBottom: 15,
+		marginBottom: 20,
 		color: '#333',
 		fontSize: 17,
-		borderRadius: 7,
-		padding: 15,
+		padding: 10,
 	},
 	submitbutton: {
-		backgroundColor: '#35AAFF',
-		width: '90%',
+		backgroundColor: '#282828',
+		borderWidth: 2,
+		borderColor: 'white',
+		width: '50%',
 		height: 45,
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginBottom: 15,
-		borderRadius: 7,
+		borderRadius: 40,
 	},
 	submittext: {
 		color: '#FFF',
@@ -163,8 +173,13 @@ const styles = StyleSheet.create({
 	registertext: {
 		color: '#FFF',
 	},
-  text: {
-    color: '#FFF',
-    marginBottom: 10,
-  }
+ 	text: {
+		fontSize: 15,
+		color: '#FFF',
+		marginBottom: 30,
+  	},
+	backgroundImage: {
+		flex: 1,
+		resizeMode: 'cover', // ajusta a imagem ao tamanho da tela
+	},
 })
