@@ -4,13 +4,15 @@ import { createAppContainer } from 'react-navigation'
 
 import LoginScreen from './LoginScreen';
 
-const App = createStackNavigator({
-  LoginScreen,
-},
-{
-  defaultNavigationOptions: {
-      headerShow: false,
+const AppNavigator = createStackNavigator({
+  LoginScreen: {
+    screen: LoginScreen,
+    navigationOptions: {
+      headerShown: false
+    }
   }
 });
 
-export default createAppContainer (App);
+const AppContainer = createAppContainer(AppNavigator);
+
+export default AppContainer;
