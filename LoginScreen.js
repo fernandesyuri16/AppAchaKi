@@ -19,19 +19,22 @@ const initialState = {
 	logo: new Animated.ValueXY({x: 1, y: 1}),
 }
 
+
+
 export default class LoginScreen extends Component {
 
 	state = {...initialState}
+
 	keyboardDidShow = () => {
 		Animated.parallel([
 			Animated.timing(this.state.logo.x, {
 				toValue: 0.7,
-				duration: 80,
+				duration: 35,
 				useNativeDriver: true,
 			}).start(),
 			Animated.timing(this.state.logo.y, {
 				toValue: 0.7,
-				duration: 80,
+				duration: 35,
 				useNativeDriver: true,
 			}).start(),
 		])
@@ -40,16 +43,17 @@ export default class LoginScreen extends Component {
 		Animated.parallel([
 			Animated.timing(this.state.logo.x, {
 				toValue: 1,
-				duration: 80,
+				duration: 35,
 				useNativeDriver: true,
 			}).start(),
 			Animated.timing(this.state.logo.y, {
 				toValue: 1,
-				duration: 80,
+				duration: 35,
 				useNativeDriver: true,
 			}).start(),
 		])
 	}
+
 	componentDidMount = () => {
 		Keyboard.addListener('keyboardDidShow', this.keyboardDidShow)
 		Keyboard.addListener('keyboardDidHide', this.keyboardDidHide)
@@ -174,9 +178,10 @@ const styles = StyleSheet.create({
 		color: '#FFF',
 	},
  	text: {
-		fontSize: 15,
+		fontSize: 20,
 		color: '#FFF',
 		marginBottom: 30,
+		fontFamily: ''
   	},
 	backgroundImage: {
 		flex: 1,
