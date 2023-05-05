@@ -12,6 +12,7 @@ import {
 	ImageBackground,
 } from 'react-native'
 import React, {Component} from 'react'
+import { Button } from 'react-native-web'
 
 const initialState = {
 	offset: new Animated.ValueXY({x: 0, y: 95}),
@@ -123,7 +124,7 @@ export default class LoginScreen extends Component {
 							<Text style={styles.submittext}>Confirmar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Text style={styles.registertext}>Criar conta gratuita</Text>
+							<Text onPress={() => this.props.navigation.navigate ("PrestadorScreen")} style={styles.registertext}>Criar conta gratuita</Text>
 						</TouchableOpacity>
 					</Animated.View>
 				</ImageBackground>
