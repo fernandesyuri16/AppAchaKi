@@ -23,7 +23,7 @@ const initialState = {
 
 
 
-export default class LoginScreen extends Component {
+export default class HomeScreen extends Component {
 
 	state = {...initialState}
 
@@ -69,7 +69,6 @@ export default class LoginScreen extends Component {
 			Animated.timing(this.state.opacity, {
 				toValue: 1,
 				duration: 800,
-				bounciness: 10,
 				useNativeDriver: true,
 			}).start(),
 		])
@@ -126,7 +125,7 @@ export default class LoginScreen extends Component {
 							<Text style={styles.submittext}>Entrar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Text style={styles.registerText}>Não possui uma conta? <Text onPress={() => this.props.navigation.navigate ("PrestadorScreen")} style={styles.registerText2}> Cadastrar-se </Text> </Text>
+							<Text onPress={() => this.props.navigation.navigate ("PrestadorScreen")} style={styles.registerText}>Não possui uma conta? <Text style={styles.registerText2}> Cadastrar-se </Text> </Text>
 						</TouchableOpacity>
 					</Animated.View>
 				</ImageBackground>
