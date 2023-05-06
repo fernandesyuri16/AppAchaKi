@@ -13,6 +13,7 @@ import {
 } from 'react-native'
 import React, {Component} from 'react'
 import { Button } from 'react-native-web'
+import * as Font from 'expo-font'
 
 const initialState = {
 	offset: new Animated.ValueXY({x: 0, y: 95}),
@@ -68,6 +69,7 @@ export default class LoginScreen extends Component {
 			Animated.timing(this.state.opacity, {
 				toValue: 1,
 				duration: 800,
+				bounciness: 10,
 				useNativeDriver: true,
 			}).start(),
 		])
@@ -121,10 +123,10 @@ export default class LoginScreen extends Component {
 							onChangeText={() => {}}
 						/>
 						<TouchableOpacity style={styles.submitbutton}>
-							<Text style={styles.submittext}>Confirmar</Text>
+							<Text style={styles.submittext}>Entrar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Text onPress={() => this.props.navigation.navigate ("PrestadorScreen")} style={styles.registertext}>Criar conta gratuita</Text>
+							<Text style={styles.registerText}>Não possui uma conta? <Text onPress={() => this.props.navigation.navigate ("PrestadorScreen")} style={styles.registerText2}> Cadastrar-se </Text> </Text>
 						</TouchableOpacity>
 					</Animated.View>
 				</ImageBackground>
@@ -168,21 +170,32 @@ const styles = StyleSheet.create({
 		height: 45,
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginBottom: 15,
 		borderRadius: 40,
 	},
 	submittext: {
+		marginTop: 5,
 		color: '#FFF',
 		fontSize: 18,
 	},
-	registertext: {
+	registerText: {
+		fontSize: 15,
 		color: '#FFF',
+		elevation: 100,
+		marginTop: 15,
+	},
+	registerText2: {
+		fontSize: 17,
+		fontFamily: '',
+		color: '#282828',
+		fontWeight: '900',
+		textShadowColor: 'white',
+		textShadowOffset: { width: 0, height: 1, },
+		textShadowRadius: 1,
 	},
  	text: {
 		fontSize: 20,
 		color: '#FFF',
 		marginBottom: 30,
-		fontFamily: ''
   	},
 	backgroundImage: {
 		flex: 1,
