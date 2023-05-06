@@ -11,9 +11,9 @@ import {
 	View,
 	ImageBackground,
 } from 'react-native'
-import React, {Component} from 'react'
-import { Button } from 'react-native-web'
+import React, {Component, useState} from 'react'
 import * as Font from 'expo-font'
+import { RadioButton } from 'react-native-paper';
 
 const initialState = {
 	offset: new Animated.ValueXY({x: 0, y: 95}),
@@ -21,11 +21,13 @@ const initialState = {
 	logo: new Animated.ValueXY({x: 1, y: 1}),
 }
 
-
-
 export default class HomeScreen extends Component {
 
-	state = {...initialState}
+	state = {...initialState, selectedOption: ''}
+
+    handleOptionChange = (option) => {
+        this.setState({ selectedOption: option });
+      };
 
 	keyboardDidShow = () => {
 		Animated.parallel([
@@ -75,6 +77,24 @@ export default class HomeScreen extends Component {
 	}
 
 	render() {
+
+        const { selectedOption } = this.state;
+
+        handleCadastroPress = () => {
+
+            const { selectedOption } = this.state;
+
+            if (selectedOption === 'prestador') {
+              // Navegar para a tela de prestadores
+
+              this.props.navigation.navigate("PrestadorScreen");
+            } else if (selectedOption === 'cliente') {
+              // Navegar para a tela de clientes
+
+              this.props.navigation.navigate("ClienteScreen");
+            }
+          };
+
 		return (
 			<KeyboardAvoidingView
 				style={styles.background}
@@ -94,6 +114,44 @@ export default class HomeScreen extends Component {
 							source={require('./assets/logoGG.png')}
 						/>
 					</View>
+
+                    <View style={styles.radioButtons}>
+                        <TouchableOpacity
+                            style={{ marginRight: 40 }}
+                            onPress={() => this.handleOptionChange('prestador')}>
+
+                            <View style={styles.radioPrestador}>
+                                <RadioButton.Android
+                                    value="prestador"
+                                    color="white"
+                                    uncheckedColor="white"
+                                    status={selectedOption === 'prestador' ? 'checked' : 'unchecked'}
+                                    onPress={() => this.handleOptionChange('prestador')}
+                                />
+                                <Text style={styles.typePerson}>Prestador</Text>
+                            </View>
+
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={{ marginRight: 10 }}
+                            onPress={() => this.handleOptionChange('cliente')}>
+
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                <RadioButton.Android
+                                    value="cliente"
+                                    color="white"
+                                    uncheckedColor="white"
+                                    status={selectedOption === 'cliente' ? 'checked' : 'unchecked'}
+                                    onPress={() => this.handleOptionChange('cliente')}
+                                />
+                                <Text style={styles.typePerson}>Cliente</Text>
+                            </View>
+
+                        </TouchableOpacity>
+
+                    </View>
+
 					<Animated.View
 						style={[
 							styles.container,
@@ -106,27 +164,19 @@ export default class HomeScreen extends Component {
 								],
 							},
 						]}>
-						<Text style={styles.text}>Entre em sua Conta!</Text>
-						<TextInput
-							placeholderTextColor="#3337"
-							style={styles.input}
-							placeholder="Usuário ou E-mail"
-							autoCorrect={false}
-							onChangeText={() => {}}
-						/>
-						<TextInput
-							placeholderTextColor="#3337"
-							style={styles.input}
-							placeholder="Senha"
-							autoCorrect={false}
-							onChangeText={() => {}}
-						/>
-						<TouchableOpacity style={styles.submitbutton}>
-							<Text style={styles.submittext}>Entrar</Text>
-						</TouchableOpacity>
-						<TouchableOpacity>
-							<Text onPress={() => this.props.navigation.navigate ("PrestadorScreen")} style={styles.registerText}>Não possui uma conta? <Text style={styles.registerText2}> Cadastrar-se </Text> </Text>
-						</TouchableOpacity>
+
+                        <View style={styles.buttons}>
+
+                            <TouchableOpacity style={styles.loginButton1}>
+                            <Text onPress={() => this.props.navigation.navigate ("LoginScreen")} style={styles.loginText}> Login </Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={styles.loginButton2} onPress={this.handleCadastroPress}>
+                                <Text style={styles.loginText}>Cadastro</Text>
+                            </TouchableOpacity>
+
+                        </View>
+
 					</Animated.View>
 				</ImageBackground>
 			</KeyboardAvoidingView>
@@ -151,7 +201,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingBottom: 70,
+		paddingBottom: 0,
 	},
 	input: {
 		backgroundColor: '#FFF',
@@ -161,18 +211,28 @@ const styles = StyleSheet.create({
 		fontSize: 17,
 		padding: 10,
 	},
-	submitbutton: {
+	loginButton1: {
 		backgroundColor: '#282828',
 		borderWidth: 2,
 		borderColor: 'white',
-		width: '50%',
-		height: 45,
+		width: '25%',
+		height: 50,
+        marginRight: 50,
 		justifyContent: 'center',
 		alignItems: 'center',
 		borderRadius: 40,
 	},
-	submittext: {
-		marginTop: 5,
+    loginButton2: {
+		backgroundColor: '#282828',
+		borderWidth: 2,
+		borderColor: 'white',
+		width: '25%',
+		height: 50,
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderRadius: 40,
+	},
+	loginText: {
 		color: '#FFF',
 		fontSize: 18,
 	},
@@ -200,4 +260,20 @@ const styles = StyleSheet.create({
 		flex: 1,
 		resizeMode: 'cover', // ajusta a imagem ao tamanho da tela
 	},
+    buttons: {
+        flexDirection: 'row',
+    },
+    radioButtons: {
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginBottom: 10
+    },
+    radioPrestador: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    typePerson: {
+        fontSize: 18,
+        color: 'white'
+    }
 })
