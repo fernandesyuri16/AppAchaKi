@@ -30,6 +30,7 @@ export default class PrestadorScreen extends Component {
                                     autoCorrect={false}
                                     onChangeText={() => {}}
                                 />
+								<View style={styles.inputSpacer} />
                                 <TextInput
                                     placeholderTextColor="#3337"
                                     style={styles.inputSec}
@@ -126,10 +127,12 @@ const styles = StyleSheet.create({
 		backgroundColor: '#FFF',
 		marginBottom: 20,
 		color: '#333',
-		margin: 5,
 		fontSize: 17,
 		width: '79%',
 		padding: 5
+	},
+	inputSpacer: {
+		width: 16.1, // Largura do espaço entre os inputs
 	},
 	submitbutton: {
 		backgroundColor: '#282828',
