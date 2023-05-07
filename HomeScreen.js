@@ -26,8 +26,20 @@ export default class HomeScreen extends Component {
 	state = {...initialState, selectedOption: ''}
 
     handleOptionChange = (option) => {
-        this.setState({ selectedOption: option });
-      };
+    	this.setState({ selectedOption: option });
+    };
+
+	handleCadastroPress = () => {
+		const { selectedOption } = this.state;
+
+		if (selectedOption === 'prestador') {
+		  // Navegar para a tela específica para prestadores
+		  this.props.navigation.navigate('PrestadorScreen');
+		} else if (selectedOption === 'cliente') {
+		  // Navegar para a tela específica para clientes
+		  this.props.navigation.navigate('ClienteScreen');
+		}
+	  };
 
 	keyboardDidShow = () => {
 		Animated.parallel([
@@ -79,21 +91,6 @@ export default class HomeScreen extends Component {
 	render() {
 
         const { selectedOption } = this.state;
-
-        handleCadastroPress = () => {
-
-            const { selectedOption } = this.state;
-
-            if (selectedOption === 'prestador') {
-              // Navegar para a tela de prestadores
-
-              this.props.navigation.navigate("PrestadorScreen");
-            } else if (selectedOption === 'cliente') {
-              // Navegar para a tela de clientes
-
-              this.props.navigation.navigate("ClienteScreen");
-            }
-          };
 
 		return (
 			<KeyboardAvoidingView
