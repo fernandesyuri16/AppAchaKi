@@ -33,10 +33,10 @@ export default class HomeScreen extends Component {
 		const { selectedOption } = this.state;
 
 		if (selectedOption === 'prestador') {
-		  // Navegar para a tela específica para prestadores
+		  // Navegar para a tela específica de prestadores
 		  this.props.navigation.navigate('PrestadorScreen');
 		} else if (selectedOption === 'cliente') {
-		  // Navegar para a tela específica para clientes
+		  // Navegar para a tela específica de clientes (falta criar)
 		  this.props.navigation.navigate('ClienteScreen');
 		}
 	  };
