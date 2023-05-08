@@ -115,6 +115,7 @@ export default class LoginScreen extends Component {
 						<TextInput
 							placeholderTextColor="#3337"
 							style={styles.input}
+							secureTextEntry={true}
 							placeholder="Senha"
 							autoCorrect={false}
 							onChangeText={() => {}}
