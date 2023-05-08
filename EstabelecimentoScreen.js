@@ -1,7 +1,8 @@
 import {Animated, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground} from 'react-native'
 import React, {Component} from 'react'
+import { Button } from 'react-native-web'
 
-export default class PrestadorScreen extends Component {
+export default class EstabelecimentoScreen extends Component {
 
 	render() {
 		return (
@@ -13,92 +14,75 @@ export default class PrestadorScreen extends Component {
 					<Animated.View
 						style={[styles.container]}>
                         <View style={styles.corpo}>
-                            <Text style={styles.text}>Insira suas informações pessoais:</Text>
+                            <Text style={styles.text}>Insira as informações do estabelecimento:</Text>
                             <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="Nome"
+                                placeholder="Endereço"
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
-							<TextInput
+                            <View style={styles.corpoSec}>
+                                <TextInput
+                                    placeholderTextColor="#3337"
+                                    style={styles.inputTer}
+                                    placeholder="Horário comercial"
+                                    autoCorrect={false}
+                                    onChangeText={() => {}}
+                                />
+                                <TextInput
+                                    placeholderTextColor="#3337"
+                                    style={styles.inputQua}
+                                    placeholder="Categoria"
+                                    autoCorrect={false}
+                                    onChangeText={() => {}}
+                                />
+                            </View>
+                            <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="Data de nascimento"
-                                autoCorrect={false}
-                                onChangeText={() => {}}
-                            />
-							<TextInput
-                                placeholderTextColor="#3337"
-                                style={styles.input}
-                                placeholder="E-mail"
+                                placeholder="Nome fantasia"
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
                             <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="Telefone"
+                                placeholder="CNPJ / CPF"
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
-							<View style={styles.inputSpacer} />
                             <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="CEP"
+                                placeholder="Contato"
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
-							<TextInput
+                            <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="Rua"
+                                placeholder="Anexar fotos"
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
-							<View style={styles.corpoSec}>
-								<TextInput
-									placeholderTextColor="#3337"
-									style={styles.inputSec}
-									placeholder="Número"
-									autoCorrect={false}
-									onChangeText={() => {}}
-								/>
-								<TextInput
-									placeholderTextColor="#3337"
-									style={styles.inputTer}
-									placeholder="Bairro"
-									autoCorrect={false}
-									onChangeText={() => {}}
-								/>
-							</View>
-							<View style={styles.corpoSec}>
-								<TextInput
-									placeholderTextColor="#3337"
-									style={styles.inputSec}
-									placeholder="Cidade"
-									autoCorrect={false}
-									onChangeText={() => {}}
-								/>
-								<TextInput
-									placeholderTextColor="#3337"
-									style={styles.inputTer}
-									placeholder="Estado"
-									autoCorrect={false}
-									onChangeText={() => {}}
-								/>
-							</View>
-							<TextInput
+                            <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="Complemento"
+                                placeholder="Anexar certificados"
+                                autoCorrect={false}
+                                onChangeText={() => {}}
+                            />
+                            <TextInput
+                                placeholderTextColor="#3337"
+                                style={styles.inputSec}
+                                placeholder="Informações adicionais"
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
                         </View>
 						<TouchableOpacity style={styles.submitbutton}>
-							<Text onPress={() => this.props.navigation.navigate ("EstabelecimentoScreen")}  style={styles.submittext}>Confirmar</Text>
+							<Text style={styles.submittext}>Confirmar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
 						<Text  style={styles.registerText}>Já possui uma conta? <Text onPress={() => this.props.navigation.navigate ("LoginScreen")} style={styles.registerText2}> Conectar </Text> </Text>
@@ -132,28 +116,38 @@ const styles = StyleSheet.create({
 		backgroundColor: '#FFF',
 		marginBottom: 10,
 		color: '#333',
-		marginTop: 5,
+		marginTop: 2,
 		fontSize: 17,
 		width: '100%',
 		padding: 6
-
 	},
-	inputSec:{
+    inputSec: {
+        backgroundColor: '#FFF',
+		marginBottom: 10,
+		color: '#333',
+		marginTop: 2,
+		fontSize: 17,
+		width: '100%',
+        paddingBottom: 35,
+        padding: 6,
+        textAlignVertical: 'top'
+    },
+    inputTer:{
         backgroundColor: '#FFF',
 		marginBottom: 10,
 		color: '#333',
 		fontSize: 17,
 		width: '83.5%',
-		padding: 6
+		padding: 5
     },
-    inputTer: {
+    inputQua: {
         backgroundColor: '#FFF',
 		marginBottom: 10,
 		color: '#333',
 		fontSize: 17,
-		width: '77.4%',
-		padding: 6,
-        marginLeft: 10
+		width: '80.5%',
+		padding: 5,
+        marginLeft: 5
     },
 	inputSpacer: {
 		width: 16.1, // Largura do espaço entre os inputs
@@ -190,7 +184,7 @@ const styles = StyleSheet.create({
 		width: '80%'
     },
     corpoSec: {
-		flexDirection: 'row',
+        flexDirection: 'row',
         justifyContent: 'space-between',
 		alignItems: 'center',
 		width: '60%',
@@ -202,6 +196,7 @@ const styles = StyleSheet.create({
 	},
 	registerText2: {
 		fontSize: 17,
+		fontFamily: '',
 		color: '#282828',
 		fontWeight: '900',
 		textShadowColor: 'white',

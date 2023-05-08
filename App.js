@@ -4,6 +4,7 @@ import { createAppContainer } from 'react-navigation'
 
 import LoginScreen from './LoginScreen';
 import PrestadorScreen from './PrestadorScreen';
+import EstabelecimentoScreen from './EstabelecimentoScreen';
 import HomeScreen from './HomeScreen';
 
 const AppNavigator = createStackNavigator({
@@ -24,7 +25,13 @@ const AppNavigator = createStackNavigator({
     navigationOptions: {
       headerShown: false
     }
-  }
+  },
+  EstabelecimentoScreen: {
+    screen: EstabelecimentoScreen,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
 });
 
 const AppContainer = createAppContainer(AppNavigator);
