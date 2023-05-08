@@ -2,7 +2,7 @@ import {Animated, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View,
 import React, {Component} from 'react'
 import { Button } from 'react-native-web'
 
-export default class EstabelecimentoScreen extends Component {
+export default class CompanyScreen extends Component {
 
 	render() {
 		return (
@@ -196,7 +196,6 @@ const styles = StyleSheet.create({
 	},
 	registerText2: {
 		fontSize: 17,
-		fontFamily: '',
 		color: '#282828',
 		fontWeight: '900',
 		textShadowColor: 'white',
