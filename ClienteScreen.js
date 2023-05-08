@@ -143,7 +143,8 @@ const styles = StyleSheet.create({
 		marginTop: 3,
 		fontSize: 17,
 		width: '100%',
-		padding: 6
+		height: '6%',
+		padding: '2%'
 
 	},
 	inputSec:{
@@ -210,7 +211,6 @@ const styles = StyleSheet.create({
 	},
 	registerText2: {
 		fontSize: 17,
-		fontFamily: '',
 		color: '#282828',
 		fontWeight: '900',
 		textShadowColor: 'white',
