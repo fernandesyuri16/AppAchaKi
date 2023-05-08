@@ -43,6 +43,13 @@ export default class PrestadorScreen extends Component {
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
+                            <TextInput
+                                placeholderTextColor="#3337"
+                                style={styles.input}
+                                placeholder="Senha"
+                                autoCorrect={false}
+                                onChangeText={() => {}}
+                            />
 							<View style={styles.inputSpacer} />
                             <TextInput
                                 placeholderTextColor="#3337"
@@ -99,7 +106,7 @@ export default class PrestadorScreen extends Component {
                             />
                         </View>
 						<TouchableOpacity style={styles.submitbutton}>
-							<Text onPress={() => this.props.navigation.navigate ("EstabelecimentoScreen")}  style={styles.submittext}>Confirmar</Text>
+							<Text  style={styles.submittext}>Confirmar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
 						<Text  style={styles.registerText}>Já possui uma conta? <Text onPress={() => this.props.navigation.navigate ("LoginScreen")} style={styles.registerText2}> Conectar </Text> </Text>

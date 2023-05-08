@@ -6,6 +6,7 @@ import LoginScreen from './LoginScreen';
 import PrestadorScreen from './PrestadorScreen';
 import EstabelecimentoScreen from './EstabelecimentoScreen';
 import HomeScreen from './HomeScreen';
+import ClienteScreen from './ClienteScreen';
 
 const AppNavigator = createStackNavigator({
   HomeScreen: {
@@ -32,6 +33,12 @@ const AppNavigator = createStackNavigator({
       headerShown: false
     }
   },
+  ClienteScreen: {
+    screen: ClienteScreen,
+    navigationOptions: {
+      headerShown: false
+    }
+  }
 });
 
 const AppContainer = createAppContainer(AppNavigator);
