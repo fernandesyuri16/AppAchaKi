@@ -1,6 +1,5 @@
 import {
 	Animated,
-	Image,
 	Keyboard,
 	KeyboardAvoidingView,
 	Platform,
@@ -12,8 +11,6 @@ import {
 	ImageBackground,
 } from 'react-native'
 import React, {Component} from 'react'
-import { Button } from 'react-native-web'
-import * as Font from 'expo-font'
 
 const initialState = {
 	offset: new Animated.ValueXY({x: 0, y: 95}),
@@ -185,7 +182,6 @@ const styles = StyleSheet.create({
 	},
 	registerText2: {
 		fontSize: 17,
-		fontFamily: '',
 		color: '#282828',
 		fontWeight: '900',
 		textShadowColor: 'white',

@@ -1,6 +1,5 @@
 import {Animated, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground} from 'react-native'
 import React, {Component} from 'react'
-import { Button } from 'react-native-web'
 
 export default class PrestadorScreen extends Component {
 
@@ -178,7 +177,6 @@ const styles = StyleSheet.create({
 	},
 	registerText2: {
 		fontSize: 17,
-		fontFamily: '',
 		color: '#282828',
 		fontWeight: '900',
 		textShadowColor: 'white',
