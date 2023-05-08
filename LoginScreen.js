@@ -124,7 +124,7 @@ export default class LoginScreen extends Component {
 							<Text style={styles.submittext}>Entrar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Text style={styles.registerText}>Não possui uma conta? <Text onPress={() => this.props.navigation.navigate ("PrestadorScreen")} style={styles.registerText2}> Cadastrar-se </Text> </Text>
+							<Text style={styles.registerText}>Não possui uma conta? <Text onPress={() => this.props.navigation.navigate ("HomeScreen")} style={styles.registerText2}> Cadastrar-se </Text> </Text>
 						</TouchableOpacity>
 					</Animated.View>
 				</ImageBackground>

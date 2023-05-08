@@ -1,5 +1,6 @@
 import {Animated, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground} from 'react-native'
 import React, {Component} from 'react'
+import { Button } from 'react-native-web'
 
 export default class PrestadorScreen extends Component {
 
@@ -13,7 +14,7 @@ export default class PrestadorScreen extends Component {
 					<Animated.View
 						style={[styles.container]}>
                         <View style={styles.corpo}>
-                            <Text style={styles.text}>Insira suas informações pessoais:</Text>
+                            <Text style={styles.text}>Crie sua conta:</Text>
                             <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
@@ -24,7 +25,7 @@ export default class PrestadorScreen extends Component {
 							<TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="Data de nascimento"
+                                placeholder="CPF"
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -202,6 +203,7 @@ const styles = StyleSheet.create({
 	},
 	registerText2: {
 		fontSize: 17,
+		fontFamily: '',
 		color: '#282828',
 		fontWeight: '900',
 		textShadowColor: 'white',
