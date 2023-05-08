@@ -111,44 +111,6 @@ export default class HomeScreen extends Component {
 							source={require('./assets/logoGG.png')}
 						/>
 					</View>
-
-                    <View style={styles.radioButtons}>
-                        <TouchableOpacity
-                            style={{ marginRight: 40 }}
-                            onPress={() => this.handleOptionChange('prestador')}>
-
-                            <View style={styles.radioPrestador}>
-                                <RadioButton.Android
-                                    value="prestador"
-                                    color="white"
-                                    uncheckedColor="white"
-                                    status={selectedOption === 'prestador' ? 'checked' : 'unchecked'}
-                                    onPress={() => this.handleOptionChange('prestador')}
-                                />
-                                <Text style={styles.typePerson}>Prestador</Text>
-                            </View>
-
-                        </TouchableOpacity>
-
-                        <TouchableOpacity
-                            style={{ marginRight: 10 }}
-                            onPress={() => this.handleOptionChange('cliente')}>
-
-                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                <RadioButton.Android
-                                    value="cliente"
-                                    color="white"
-                                    uncheckedColor="white"
-                                    status={selectedOption === 'cliente' ? 'checked' : 'unchecked'}
-                                    onPress={() => this.handleOptionChange('cliente')}
-                                />
-                                <Text style={styles.typePerson}>Cliente</Text>
-                            </View>
-
-                        </TouchableOpacity>
-
-                    </View>
-
 					<Animated.View
 						style={[
 							styles.container,
@@ -162,13 +124,45 @@ export default class HomeScreen extends Component {
 							},
 						]}>
 
+						<View style={styles.radioButtons}>
+							<TouchableOpacity
+								style={{ marginRight: 40 }}
+								onPress={() => this.handleOptionChange('prestador')}>
+
+								<View style={styles.radioPrestador}>
+									<RadioButton.Android
+										value="prestador"
+										color="white"
+										uncheckedColor="white"
+										status={selectedOption === 'prestador' ? 'checked' : 'unchecked'}
+										onPress={() => this.handleOptionChange('prestador')}
+									/>
+									<Text style={styles.typePerson}>Prestador</Text>
+								</View>
+							</TouchableOpacity>
+							<TouchableOpacity
+								style={{ marginRight: 10 }}
+								onPress={() => this.handleOptionChange('cliente')}>
+								<View style={{ flexDirection: 'row', alignItems: 'center' }}>
+									<RadioButton.Android
+										value="cliente"
+										color="white"
+										uncheckedColor="white"
+										status={selectedOption === 'cliente' ? 'checked' : 'unchecked'}
+										onPress={() => this.handleOptionChange('cliente')}
+									/>
+									<Text style={styles.typePerson}>Cliente</Text>
+								</View>
+							</TouchableOpacity>
+						</View>
+
                         <View style={styles.buttons}>
 
-                            <TouchableOpacity style={styles.loginButton1}>
+                            <TouchableOpacity style={styles.loginButton}>
                             <Text onPress={() => this.props.navigation.navigate ("LoginScreen")} style={styles.loginText}> Login </Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.loginButton2} onPress={this.handleCadastroPress}>
+                            <TouchableOpacity style={styles.registerButton} onPress={this.handleCadastroPress}>
                                 <Text style={styles.loginText}>Cadastro</Text>
                             </TouchableOpacity>
 
@@ -187,28 +181,19 @@ const styles = StyleSheet.create({
 		alignContent: 'center',
 		justifyContent: 'center',
 		backgroundColor: '#333',
-		backgroundImage: 'url(${backgroundImg})',
 	},
 	logocontainer: {
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
+		marginTop: 230,
 	},
 	container: {
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingBottom: 0,
 	},
-	input: {
-		backgroundColor: '#FFF',
-		width: '90%',
-		marginBottom: 20,
-		color: '#333',
-		fontSize: 17,
-		padding: 10,
-	},
-	loginButton1: {
+	loginButton: {
 		backgroundColor: '#282828',
 		borderWidth: 2,
 		borderColor: 'white',
@@ -219,7 +204,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		borderRadius: 40,
 	},
-    loginButton2: {
+    registerButton: {
 		backgroundColor: '#282828',
 		borderWidth: 2,
 		borderColor: 'white',
@@ -239,31 +224,18 @@ const styles = StyleSheet.create({
 		elevation: 100,
 		marginTop: 15,
 	},
-	registerText2: {
-		fontSize: 17,
-		fontFamily: '',
-		color: '#282828',
-		fontWeight: '900',
-		textShadowColor: 'white',
-		textShadowOffset: { width: 0, height: 1, },
-		textShadowRadius: 1,
-	},
- 	text: {
-		fontSize: 20,
-		color: '#FFF',
-		marginBottom: 30,
-  	},
 	backgroundImage: {
 		flex: 1,
 		resizeMode: 'cover', // ajusta a imagem ao tamanho da tela
 	},
     buttons: {
         flexDirection: 'row',
+		marginBottom: 200,
     },
     radioButtons: {
         justifyContent: 'center',
         flexDirection: 'row',
-        marginBottom: 10
+		marginBottom: 35,
     },
     radioPrestador: {
         flexDirection: 'row',
@@ -271,6 +243,9 @@ const styles = StyleSheet.create({
     },
     typePerson: {
         fontSize: 18,
-        color: 'white'
+        color: 'white',
+		textShadowColor: 'black',
+		textShadowOffset: {width: 2, height: 2},
+		textShadowRadius: 8
     }
 })
