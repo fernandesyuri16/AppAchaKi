@@ -12,7 +12,6 @@ import {
 	ImageBackground,
 } from 'react-native'
 import React, {Component, useState} from 'react'
-import * as Font from 'expo-font'
 import { RadioButton } from 'react-native-paper';
 
 const initialState = {

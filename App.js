@@ -4,7 +4,10 @@ import { createAppContainer } from 'react-navigation'
 
 import LoginScreen from './LoginScreen';
 import PrestadorScreen from './PrestadorScreen';
+import CompanyScreen from './CompanyScreen';
 import HomeScreen from './HomeScreen';
+import ClienteScreen from './ClienteScreen';
+import InicioScreen from './InicioScreen';
 
 const AppNavigator = createStackNavigator({
   HomeScreen: {
@@ -21,6 +24,24 @@ const AppNavigator = createStackNavigator({
   },
   PrestadorScreen: {
     screen: PrestadorScreen,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
+  CompanyScreen: {
+    screen: CompanyScreen,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
+  ClienteScreen: {
+    screen: ClienteScreen,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
+  InicioScreen: {
+    screen: InicioScreen,
     navigationOptions: {
       headerShown: false
     }

@@ -20,7 +20,7 @@ const initialState = {
 
 
 
-export default class LoginScreen extends Component {
+export default class InicioScreen extends Component {
 
 	state = {...initialState}
 
@@ -104,27 +104,8 @@ export default class LoginScreen extends Component {
 								],
 							},
 						]}>
-						<Text style={styles.text}>Entre em sua Conta!</Text>
-						<TextInput
-							placeholderTextColor="#3337"
-							style={styles.input}
-							placeholder="Usuário ou E-mail"
-							autoCorrect={false}
-							onChangeText={() => {}}
-						/>
-						<TextInput
-							placeholderTextColor="#3337"
-							style={styles.input}
-							secureTextEntry={true}
-							placeholder="Senha"
-							autoCorrect={false}
-							onChangeText={() => {}}
-						/>
 						<TouchableOpacity style={styles.submitbutton}>
-							<Text style={styles.submittext}>Entrar</Text>
-						</TouchableOpacity>
-						<TouchableOpacity>
-							<Text style={styles.registerText}>Não possui uma conta? <Text onPress={() => this.props.navigation.navigate ("HomeScreen")} style={styles.registerText2}> Cadastrar-se </Text> </Text>
+							<Text onPress={() => this.props.navigation.navigate ("HomeScreen")} style={styles.submittext}>Teste - Voltar</Text>
 						</TouchableOpacity>
 					</Animated.View>
 				</ImageBackground>

@@ -1,5 +1,6 @@
 import {Animated, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground} from 'react-native'
 import React, {Component} from 'react'
+import { Button } from 'react-native-web'
 
 export default class PrestadorScreen extends Component {
 
@@ -13,7 +14,7 @@ export default class PrestadorScreen extends Component {
 					<Animated.View
 						style={[styles.container]}>
                         <View style={styles.corpo}>
-                            <Text style={styles.text}>Insira suas informações pessoais:</Text>
+                            <Text style={styles.text}>Crie sua conta:</Text>
                             <TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
@@ -25,7 +26,7 @@ export default class PrestadorScreen extends Component {
 							<TextInput
                                 placeholderTextColor="#3337"
                                 style={styles.input}
-                                placeholder="Data de nascimento"
+                                placeholder="CPF"
 								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
@@ -42,6 +43,14 @@ export default class PrestadorScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Telefone"
+								required
+                                autoCorrect={false}
+                                onChangeText={() => {}}
+                            />
+                            <TextInput
+                                placeholderTextColor="#3337"
+                                style={styles.input}
+                                placeholder="Senha"
 								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
@@ -108,7 +117,7 @@ export default class PrestadorScreen extends Component {
                             />
                         </View>
 						<TouchableOpacity style={styles.submitbutton}>
-							<Text onPress={() => this.props.navigation.navigate ("CompanyScreen")}  style={styles.submittext}>Confirmar</Text>
+							<Text onPress={() => this.props.navigation.navigate ("InicioScreen")} style={styles.submittext}>Confirmar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
 						<Text  style={styles.registerText}>Já possui uma conta? <Text onPress={() => this.props.navigation.navigate ("LoginScreen")} style={styles.registerText2}> Conectar </Text> </Text>
@@ -142,10 +151,11 @@ const styles = StyleSheet.create({
 		backgroundColor: '#FFF',
 		marginBottom: 10,
 		color: '#333',
-		marginTop: 5,
+		marginTop: 3,
 		fontSize: 17,
 		width: '100%',
-		padding: 6
+		height: '6%',
+		padding: '2%'
 
 	},
 	inputSec:{
