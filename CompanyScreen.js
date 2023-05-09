@@ -19,6 +19,7 @@ export default class CompanyScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Endereço"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -27,6 +28,7 @@ export default class CompanyScreen extends Component {
                                     placeholderTextColor="#3337"
                                     style={styles.inputTer}
                                     placeholder="Horário comercial"
+									required
                                     autoCorrect={false}
                                     onChangeText={() => {}}
                                 />
@@ -34,6 +36,7 @@ export default class CompanyScreen extends Component {
                                     placeholderTextColor="#3337"
                                     style={styles.inputQua}
                                     placeholder="Categoria"
+									required
                                     autoCorrect={false}
                                     onChangeText={() => {}}
                                 />
@@ -42,6 +45,7 @@ export default class CompanyScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Nome fantasia"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -49,6 +53,7 @@ export default class CompanyScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="CNPJ / CPF"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -56,6 +61,7 @@ export default class CompanyScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Contato"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -63,6 +69,7 @@ export default class CompanyScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Anexar fotos"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />

@@ -18,6 +18,7 @@ export default class PrestadorScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Nome"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -25,6 +26,7 @@ export default class PrestadorScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Data de nascimento"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -32,6 +34,7 @@ export default class PrestadorScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="E-mail"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -39,6 +42,7 @@ export default class PrestadorScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Telefone"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -47,6 +51,7 @@ export default class PrestadorScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="CEP"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -54,6 +59,7 @@ export default class PrestadorScreen extends Component {
                                 placeholderTextColor="#3337"
                                 style={styles.input}
                                 placeholder="Rua"
+								required
                                 autoCorrect={false}
                                 onChangeText={() => {}}
                             />
@@ -62,6 +68,7 @@ export default class PrestadorScreen extends Component {
 									placeholderTextColor="#3337"
 									style={styles.inputSec}
 									placeholder="Número"
+									required
 									autoCorrect={false}
 									onChangeText={() => {}}
 								/>
@@ -69,6 +76,7 @@ export default class PrestadorScreen extends Component {
 									placeholderTextColor="#3337"
 									style={styles.inputTer}
 									placeholder="Bairro"
+									required
 									autoCorrect={false}
 									onChangeText={() => {}}
 								/>
@@ -78,6 +86,7 @@ export default class PrestadorScreen extends Component {
 									placeholderTextColor="#3337"
 									style={styles.inputSec}
 									placeholder="Cidade"
+									required
 									autoCorrect={false}
 									onChangeText={() => {}}
 								/>
@@ -85,6 +94,7 @@ export default class PrestadorScreen extends Component {
 									placeholderTextColor="#3337"
 									style={styles.inputTer}
 									placeholder="Estado"
+									required
 									autoCorrect={false}
 									onChangeText={() => {}}
 								/>
