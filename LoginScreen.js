@@ -150,28 +150,29 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingBottom: 70,
+		paddingBottom: '18%',
 	},
 	input: {
 		backgroundColor: '#FFF',
 		width: '90%',
-		marginBottom: 20,
+		marginBottom: '2.5%',
 		color: '#333',
 		fontSize: 17,
-		padding: 10,
+		padding: '2.5%',
+		borderRadius: 4
 	},
 	submitbutton: {
 		backgroundColor: '#282828',
 		borderWidth: 2,
 		borderColor: 'white',
-		width: '50%',
-		height: 45,
+		width: '35%',
+		height: '12%',
 		justifyContent: 'center',
 		alignItems: 'center',
 		borderRadius: 40,
+		marginTop: '1%'
 	},
 	submittext: {
-		marginTop: 5,
 		color: '#FFF',
 		fontSize: 18,
 	},
@@ -179,7 +180,7 @@ const styles = StyleSheet.create({
 		fontSize: 15,
 		color: '#FFF',
 		elevation: 100,
-		marginTop: 15,
+		marginTop: '1%',
 	},
 	registerText2: {
 		fontSize: 17,
@@ -192,7 +193,7 @@ const styles = StyleSheet.create({
  	text: {
 		fontSize: 20,
 		color: '#FFF',
-		marginBottom: 30,
+		marginBottom: '8%',
   	},
 	backgroundImage: {
 		flex: 1,
