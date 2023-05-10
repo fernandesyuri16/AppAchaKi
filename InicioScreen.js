@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	meio: {
-		backgroundColor: 'grey',
+		backgroundColor: '#D83AF0',
 		width: '100%',
 		marginTop: '2%',
 	},
