@@ -1,5 +1,7 @@
 import {Image, Animated, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground,} from 'react-native'
 import React, {Component} from 'react'
+import { LinearGradient } from 'expo-linear-gradient';
+
 export default class InicioScreen extends Component {
 
 	render() {
@@ -19,9 +21,29 @@ export default class InicioScreen extends Component {
 							onChangeText={() => {}}
 
 						/>
+						<LinearGradient
+							colors={['#EE778B', '#F2509E', '#D83AF0', '#6324EB']} // Cores do degradê
+							start={[0, 0]} // Posição inicial do degradê (esquerda superior)
+							end={[1, 0]} // Posição final do degradê (direita superior)
+							style={styles.gradient}
+						>
 						<View style={styles.meio}>
 							<Text style={styles.text}>Serviços mais buscados</Text>
 						</View>
+						</LinearGradient>
+
+						{/* Adicionar o logo dos serviços aqui */}
+
+						<LinearGradient
+							colors={['#EE778B', '#F2509E', '#D83AF0', '#6324EB']} // Cores do degradê
+							start={[0, 0]} // Posição inicial do degradê (esquerda superior)
+							end={[1, 0]} // Posição final do degradê (direita superior)
+							style={styles.gradient}
+						>
+						<View style={styles.meio}>
+							<Text style={styles.text}>Categorias Recomendadas</Text>
+						</View>
+						</LinearGradient>
 					</View>
 				</ImageBackground>
 			</View>
@@ -38,22 +60,23 @@ const styles = StyleSheet.create({
 		backgroundImage: 'url(${backgroundImg})',
 	},
 	topo:{
-		flexDirection: 'column',
 		backgroundColor: '#282828',
 		alignItems: 'center'
 	},
-	meio: {
-		backgroundColor: '#D83AF0',
+	gradient: {
 		width: '100%',
-		marginTop: '2%',
+		height: '12%',
+		alignItems: 'center',
+		justifyContent: 'center',
+		marginTop: '1.5%'
 	},
 	logo: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		resizeMode: 'cover',
 		marginTop: '8%',
-		height: '35%',
-		width: '35%'
+		height: '25%',
+		width: '33%'
 
 	},
 	container: {
@@ -70,13 +93,10 @@ const styles = StyleSheet.create({
 		padding: 5,
 	},
  	text: {
-		fontSize: 24,
+		fontSize: 22,
 		fontWeight: 900,
 		color: '#FFF',
-		marginBottom: 30,
-		marginTop: '5%',
-		textAlign: 'center',
-		textAlignVertical: 'top'
+		textAlign: 'center'
   	},
 	backgroundImage: {
 		flex: 1,
