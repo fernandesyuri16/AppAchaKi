@@ -89,7 +89,7 @@ export default class CompanyScreen extends Component {
                             />
                         </View>
 						<TouchableOpacity style={styles.submitbutton}>
-							<Text onPress={() => this.props.navigation.navigate ("InicioScreen")} style={styles.submittext}>Confirmar</Text>
+							<Text onPress={() => this.props.navigation.navigate ("MainScreen")} style={styles.submittext}>Confirmar</Text>
 						</TouchableOpacity>
 						<TouchableOpacity>
 						<Text  style={styles.registerText}>Já possui uma conta? <Text onPress={() => this.props.navigation.navigate ("LoginScreen")} style={styles.registerText2}> Conectar </Text> </Text>

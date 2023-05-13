@@ -13,14 +13,20 @@ export default class MainScreen extends Component {
     			style={styles.backgroundImage}>
 					<View style={styles.topo}>
 						<Image style={styles.logo} source={require('./assets/favicon.png')}/>
-						<TextInput
-							placeholderTextColor="#3337"
-							style={styles.input}
-							placeholder="Buscar..."
-							autoCorrect={false}
-							onChangeText={() => {}}
 
-						/>
+						<View style={styles.search}>
+							<Image
+							source={require('./assets/lupa.png')}
+							style = {styles.searchImg}/>
+							<TextInput
+								placeholderTextColor="#3337"
+								style={styles.input}
+								placeholder="Buscar..."
+								autoCorrect={false}
+								onChangeText={() => {}}
+							/>
+						</View>
+
 						<LinearGradient
 							colors={['#EE778B', '#F2509E', '#D83AF0', '#6324EB']} // Cores do degradê
 							start={[0, 0]} // Posição inicial do degradê (esquerda superior)
@@ -59,6 +65,18 @@ const styles = StyleSheet.create({
 		backgroundColor: '#333',
 		backgroundImage: 'url(${backgroundImg})',
 	},
+	search: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		backgroundColor: 'white',
+	},
+	searchImg: {
+		width: '5%',
+		height: '50%',
+		backgroundColor: 'white',
+		borderWidth: 2,
+		marginLeft: '2%',
+	},
 	topo:{
 		backgroundColor: '#282828',
 		alignItems: 'center'
@@ -76,8 +94,7 @@ const styles = StyleSheet.create({
 		resizeMode: 'cover',
 		marginTop: '8%',
 		height: '25%',
-		width: '33%'
-
+		width: '33%',
 	},
 	container: {
 		flex: 1,
@@ -85,8 +102,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	},
 	input: {
-		backgroundColor: '#FFF',
-		width: '90%',
+		backgroundColor: 'white',
+		width: '87%',
 		color: '#333',
 		fontSize: 17,
 		padding: '2%',
