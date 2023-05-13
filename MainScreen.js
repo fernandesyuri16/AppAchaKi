@@ -1,8 +1,8 @@
-import {Image, Animated, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground,} from 'react-native'
+import {Image, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground,} from 'react-native'
 import React, {Component} from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default class InicioScreen extends Component {
+export default class MainScreen extends Component {
 
 	render() {
 		return (
@@ -82,15 +82,14 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: 'center',
-		justifyContent: 'center',
-		paddingBottom: 70,
+		justifyContent: 'center'
 	},
 	input: {
 		backgroundColor: '#FFF',
 		width: '90%',
 		color: '#333',
 		fontSize: 17,
-		padding: 5,
+		padding: '2%',
 	},
  	text: {
 		fontSize: 22,

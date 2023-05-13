@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#282828"
-      }
+      },
+      "package": "com.fernandesyuri.AppAchaKi"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "33b9ad87-18d7-443e-9fec-c78e39c7ae98"
+      }
     }
   }
 }
