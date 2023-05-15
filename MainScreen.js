@@ -16,7 +16,7 @@ export default class MainScreen extends Component {
 
 						<View style={styles.search}>
 							<Image
-							source={require('./assets/lupa.png')}
+							source={require('./assets/Lupa.png')}
 							style = {styles.searchImg}/>
 							<TextInput
 								placeholderTextColor="#3337"
