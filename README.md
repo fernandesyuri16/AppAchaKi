@@ -35,10 +35,18 @@ Faça o download e instalação dos programas acima citados.
 Exemplos e passo-a-passo sobre o que executar para ter um ambiente de desenvolvimento e testes em execução.
 
 ```
+-> Logar no seu GitHub pelo terminal:
+
+* git config --global user.name '[seu username do git]';
+* git config --global user.email '[seu e-mail do git]';
+
 -> Clonar este repositório em seu VSCode. Execute em seu TERMINAL:
+
 * git clone https://github.com/fernandesyuri16/AppAchaKi/
 
--> Instalar as dependências e libraries utilizadas. Para isso, vá no diretório do projeto (* cd 'C://.../.../AppAchaKi') e execute:
+-> Instalar as dependências e libraries utilizadas. Para isso,
+vá no diretório do projeto (* cd 'C://.../.../AppAchaKi') e execute:
+
  * npm install;
  * npm install expo;
  * npx expo install;
@@ -47,12 +55,12 @@ Exemplos e passo-a-passo sobre o que executar para ter um ambiente de desenvolvi
 ## ⚙️ Applying and Developing Changes
 
 ```
--> Verifique se está na branch 'develop'. Aplique alterações sempre nessa branch.
+-> Verifique se está na branch 'develop'. Aplique alterações sempre nessa branch;
 
--> Sempre que for testada uma ateração e assim comprovada sua integridade com o restante do código, mergiar com a 'master'.
+-> Sempre que for testada uma ateração e assim comprovada sua integridade com o restante do código, mergiar com a 'master';
 
 -> A 'develop' será usada para ambiente de testes e aplicação de funcionalidades (modo beta). Já a 'master'
-será utilizada para conter o projeto em si 100% funcinal e rodando.
+será utilizada para conter o projeto em si 100% funcinal e rodando;
 ```
 
 ### ⌨️ Good Practice
@@ -65,9 +73,9 @@ Aplicar as seguintes boas práticas para manter a organização no desenvolvimen
 
 -> Descrever seus commits de forma clara e de facil entendimento, para quer ler conseguir entender o que será feito;
 
--> Testar suas alterações para que não sobreponham e causem erros em outros cenários do projeto.
+-> Testar suas alterações para que não sobreponham e causem erros em outros cenários do projeto;
 
--> Sempre comunicar suas alterações para manter a equipe ciente.
+-> Sempre comunicar suas alterações para manter a equipe ciente;
 ```
 
 ## 📦 Deployment
