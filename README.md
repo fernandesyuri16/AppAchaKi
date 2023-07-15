@@ -32,7 +32,7 @@ Faça o download e instalação dos programas acima citados.
 
 ### 🔧 Configuring and Installing
 
-Uma exemplos e passo-a-passo sobre o que executar para ter um ambiente de desenvolvimento e testes em execução.
+Exemplos e passo-a-passo sobre o que executar para ter um ambiente de desenvolvimento e testes em execução.
 
 ```
 -> Clonar este repositório em seu VSCode. Execute em seu TERMINAL:
