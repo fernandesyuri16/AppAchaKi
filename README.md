@@ -36,20 +36,18 @@ Exemplos e passo-a-passo sobre o que executar para ter um ambiente de desenvolvi
 
 ```
 -> Logar no seu GitHub pelo terminal:
-
 * git config --global user.name '[seu username do git]';
 * git config --global user.email '[seu e-mail do git]';
 
 -> Clonar este repositório em seu VSCode. Execute em seu TERMINAL:
-
 * git clone https://github.com/fernandesyuri16/AppAchaKi/
 
 -> Instalar as dependências e libraries utilizadas. Para isso,
 vá no diretório do projeto (* cd 'C://.../.../AppAchaKi') e execute:
-
  * npm install;
  * npm install expo;
  * npx expo install;
+ * npx expo install react-native;
 ```
 
 ## ⚙️ Applying and Developing Changes
@@ -58,9 +56,12 @@ vá no diretório do projeto (* cd 'C://.../.../AppAchaKi') e execute:
 -> Verifique se está na branch 'develop'. Aplique alterações sempre nessa branch;
 
 -> Sempre que for testada uma ateração e assim comprovada sua integridade com o restante do código, mergiar com a 'master';
+   * Testar o projeto executando no TERMINAL:
+     * npx expo start;
 
 -> A 'develop' será usada para ambiente de testes e aplicação de funcionalidades (modo beta). Já a 'master'
 será utilizada para conter o projeto em si 100% funcinal e rodando;
+
 ```
 
 ### ⌨️ Good Practice
