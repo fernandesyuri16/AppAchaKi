@@ -16,6 +16,14 @@ Qual o software usado e como instalá-lo?
 Visual Studio Code
 https://code.visualstudio.com/download
 
+  -> Instalar as extensões do VSCode:
+    * [Color Highligth];
+    * [Dracula Oficia];
+    * [GitHub Pull Requests];
+    * [GitLens];
+    * [Material Icons];
+    * [Trailing spaces] (necessário configurá-lo para remover espaços ao salvar 'ctrl+s');
+
 Git for Windows
 https://gitforwindows.org/
 
@@ -64,7 +72,8 @@ Aplicar as seguintes boas práticas para manter a organização no desenvolvimen
 
 ## 📦 Deployment
 
-O desenvolvimento tem por objetivo desenvolver meios intuitivos para crescer e descobrir-se no mercado futuro. O objetivo é ser implementado de uma forma funcional e direta ao público, para que assim, tenha a possibilidade de se auto-destacar.
+O desenvolvimento tem por objetivo desenvolver meios intuitivos para crescer e descobrir-se no mercado futuro. 
+O objetivo é ser implementado de uma forma funcional e direta ao público, para que assim, tenha a possibilidade de se auto-destacar.
 
 ## 🛠️ Built with
 
