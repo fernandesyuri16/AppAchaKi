@@ -1,99 +1,95 @@
-# Título do projeto
+# AchaKi
 
-Um parágrafo da descrição do projeto vai aqui
+## 💭 Ideology
 
-## 🚀 Começando
+Procuramos ajudar os prestadores a encontrar mais clientes para os seus serviços e também ajudar os clientes a encontrar mais facilmente os prestadores que melhor os servem.
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+## 🚀 Getting started
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+Essas instruções permitirão que você obtenha uma cópia do projeto e saiba operá-lo na sua máquina local para fins de desenvolvimento e teste.
 
-### 📋 Pré-requisitos
+### 📋 Requirements
 
-De que coisas você precisa para instalar o software e como instalá-lo?
-
-```
-Dar exemplos
-```
-
-### 🔧 Instalação
-
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
+Qual o software usado e como instalá-lo?
 
 ```
-Dar exemplos
+Visual Studio Code
+https://code.visualstudio.com/download
+
+Git for Windows
+https://gitforwindows.org/
+
+Faça o download e instalação dos programas acima citados.
 ```
 
-E repita:
+### 🔧 Configuring and Installing
+
+Uma exemplos e passo-a-passo sobre o que executar para ter um ambiente de desenvolvimento e testes em execução.
 
 ```
-Até finalizar
+-> Clonar este repositório em seu VSCode. Execute em seu TERMINAL:
+* git clone https://github.com/fernandesyuri16/AppAchaKi/
+
+-> Instalar as dependências e libraries utilizadas. Para isso, vá no diretório do projeto (* cd 'C://.../.../AppAchaKi') e execute:
+ * npm install;
+ * npm install expo;
+ * npx expo install;
 ```
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
+## ⚙️ Applying and Developing Changes
 
 ```
-Dar exemplos
+-> Verifique se está na branch 'develop'. Aplique alterações sempre nessa branch.
+
+-> Sempre que for testada uma ateração e assim comprovada sua integridade com o restante do código, mergiar com a 'master'.
+
+-> A 'develop' será usada para ambiente de testes e aplicação de funcionalidades (modo beta). Já a 'master'
+será utilizada para conter o projeto em si 100% funcinal e rodando.
 ```
 
-### ⌨️ E testes de estilo de codificação
+### ⌨️ Good Practice
 
-Explique que eles verificam esses testes e porquê.
-
+Aplicar as seguintes boas práticas para manter a organização no desenvolvimento do projeto.
 ```
-Dar exemplos
+-> Sempre manter o códígo identado;
+
+-> Comitar nomes intuitivos;
+
+-> Descrever seus commits de forma clara e de facil entendimento, para quer ler conseguir entender o que será feito;
+
+-> Testar suas alterações para que não sobreponham e causem erros em outros cenários do projeto.
+
+-> Sempre comunicar suas alterações para manter a equipe ciente.
 ```
 
-## 📦 Implantação
+## 📦 Deployment
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+O desenvolvimento tem por objetivo desenvolver meios intuitivos para crescer e descobrir-se no mercado futuro. O objetivo é ser implementado de uma forma funcional e direta ao público, para que assim, tenha a possibilidade de se auto-destacar.
 
-## 🛠️ Construído com
+## 🛠️ Built with
 
-Mencione as ferramentas que você usou para criar seu projeto
+* [Expo](https://docs.expo.dev/) - O framework web usado;
+* [GitHub](https://github.com/) - Gerenciamento e Organização do Projeto;
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+## 📌 Version
 
-## 🖇️ Colaborando
+Nós usamos [SemVer](http://semver.org/) para metodologia de controle de versão.
+* Atualmente encontra-se em versões de testes e desenvolvimento.
 
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
+## ✒️ Authors
 
-## 📌 Versão
+* **Yuri Fernandes** - *Desenvolvimento Inicial* - [fernandesyuri16](https://github.com/fernandesyuri16/);
+* **Ygor Taveira** - *Desenvolvimento Inicial* - [YgorTaveira10](https://github.com/YgorTaveira10);
+* **Guilherme Nicula** - *Desenvolvimento Inicial* - [nicula011](https://github.com/nicula011);
 
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
+## 📄 License
 
-## ✒️ Autores
+Este projeto está sob a licença e direitos reservados para uso desenvolvimento e testes apenas dos colaboradores.
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
+## 🎁 Expressions of gratitude
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
+* Desenvolva com toda dedicação e boas práticas 📢;
+* Convide algum membro da equipe para uma cerveja 🍺;
+* Compartilhe suas ideias como os membros da equipe 🫂;
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
